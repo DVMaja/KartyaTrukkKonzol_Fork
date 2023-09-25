@@ -5,26 +5,31 @@ import modell.Pakli;
 
 public class KartyaTrukk {
 
+    private Pakli pakli;
     private static final Scanner sc = new Scanner(System.in);
-
+      
     public KartyaTrukk() {
-        Pakli pakli1 = new Pakli();
+        indit();
+    }
+    //this
+
+    private void indit() {
+        pakli = new Pakli();
 
         for (int i = 0; i < 3; i++) {
-            kirak(pakli1);
-            int oszlop = melyik();
-            //pakli1.kever(oszlop);
+            kirak();
+            int oszlop = melyik();            
+            //pakli1.kever(int oszlop);
         }
         //pakli1.ezVolt();
-        pakli1.getPakli();
-
+        pakli.getLapok();
     }
 
-    //private void indit() {}
-    private void kirak(Pakli pakli1) {
+    private void kirak() {
+        //Lap[]
 
-        for (int i = 1; i < pakli1.getPakli().length; i++) {
-            System.out.printf("%-8s", pakli1.getPakli()[i]);
+        for (int i = 1; i < pakli.getLapok().length; i++) {
+            System.out.printf("%-8s", pakli.getLapok()[i].getLeiras());
             if (i % 3 == 0) {
                 System.out.println("");
             }
@@ -41,5 +46,4 @@ public class KartyaTrukk {
         } while (!jo);
         return oszlop;
     }
-
 }
