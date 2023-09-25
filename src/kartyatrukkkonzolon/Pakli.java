@@ -6,10 +6,16 @@ public class Pakli {
 
     public Pakli() {
         //this.pakli = ;
+        feltolt();
 
     }
 
-    private void feltolt() {
+    public static String[] getPakli() {
+        return pakli;
+    }
+    
+
+    private String[] feltolt() {
 
         String[] szinek = {"P", "T", "Z", "M"};
         String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
@@ -19,9 +25,10 @@ public class Pakli {
                 pakli[i++] = szin + "_" + ertekek[e];
             }
         }
+        return pakli;
     }
 
-    private void kirak() {
+    public void kirak() {
 
         for (int i = 1; i < pakli.length; i++) {
             System.out.printf("%-8s", pakli[i]);
@@ -31,7 +38,7 @@ public class Pakli {
         }
     }
 
-    private void kever(int oszlop) {
+    public String[] kever(int oszlop) {
 
         // mindig középre a választott
         String[] ujPakli = new String[22];
@@ -59,10 +66,11 @@ public class Pakli {
                 break;
         }
         pakli = ujPakli;
+        return pakli;
 
     }
 
-    private void ezVolt() {
+    public void ezVolt() {
         System.out.println("A választott lap: " + pakli[11]);
     }
 

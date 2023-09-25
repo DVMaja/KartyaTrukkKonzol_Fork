@@ -21,10 +21,13 @@ public class KartyaTrukkKonzolon {
 
         //feltolt();
         for (int i = 0; i < 3; i++) {
-            //kirak();
+            pakli1.kirak();
             int oszlop = melyik();
+            pakli1.kever(oszlop);           
+            
             //kever(oszlop);
         }
+        pakli1.ezVolt();
         //ezVolt();
 
     }
