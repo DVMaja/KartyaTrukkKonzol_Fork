@@ -19,7 +19,7 @@ public class KartyaTrukkKonzolon {
             int oszlop = melyik();
             pakli1.kever(oszlop);
         }
-        pakli1.ezVolt();
+        //pakli1.ezVolt();
     }
 
     private static int melyik() {
