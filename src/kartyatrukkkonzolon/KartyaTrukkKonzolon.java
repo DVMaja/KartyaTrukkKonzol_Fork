@@ -9,27 +9,17 @@ public class KartyaTrukkKonzolon {
     public static void main(String[] args) {
         KartyaTrukkKonzolon kt = new KartyaTrukkKonzolon();
         kt.indit();
-
-    }
-
-    public KartyaTrukkKonzolon() {
-
     }
 
     private void indit() {
         Pakli pakli1 = new Pakli();
 
-        //feltolt();
         for (int i = 0; i < 3; i++) {
             pakli1.kirak();
             int oszlop = melyik();
-            pakli1.kever(oszlop);           
-            
-            //kever(oszlop);
+            pakli1.kever(oszlop);
         }
         pakli1.ezVolt();
-        //ezVolt();
-
     }
 
     private static int melyik() {

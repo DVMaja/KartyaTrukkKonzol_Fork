@@ -5,15 +5,12 @@ public class Pakli {
     private static String[] pakli = new String[22];
 
     public Pakli() {
-        //this.pakli = ;
         feltolt();
-
     }
 
     public static String[] getPakli() {
         return pakli;
     }
-    
 
     private String[] feltolt() {
 
@@ -39,8 +36,6 @@ public class Pakli {
     }
 
     public String[] kever(int oszlop) {
-
-        // mindig középre a választott
         String[] ujPakli = new String[22];
         switch (oszlop) {
             case 1:
@@ -67,11 +62,9 @@ public class Pakli {
         }
         pakli = ujPakli;
         return pakli;
-
     }
 
     public void ezVolt() {
         System.out.println("A választott lap: " + pakli[11]);
     }
-
 }
