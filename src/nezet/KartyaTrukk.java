@@ -1,28 +1,29 @@
-package kartyatrukkkonzolon;
+package nezet;
 
 import java.util.Scanner;
+import modell.Pakli;
 
-public class KartyaTrukkKonzolon {
+public class KartyaTrukk {
 
     private static final Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        KartyaTrukkKonzolon kt = new KartyaTrukkKonzolon();
-        kt.indit();
+    public KartyaTrukk() {
+        indit();
+
     }
 
     private void indit() {
         Pakli pakli1 = new Pakli();
 
         for (int i = 0; i < 3; i++) {
-            pakli1.kirak();
+            //pakli1.kirak();
             int oszlop = melyik();
-            pakli1.kever(oszlop);
+            //pakli1.kever(oszlop);
         }
         //pakli1.ezVolt();
     }
 
-    private static int melyik() {
+    private int melyik() {
         boolean jo;
         int oszlop;
         do {

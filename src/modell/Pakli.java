@@ -1,12 +1,11 @@
-package kartyatrukkkonzolon;
+package modell;
 
 public class Pakli {
 
     private static String[] pakli = new String[22];
 
     public Pakli() {        
-        feltolt();
-        
+        feltolt();        
     }
 
     public static String[] getPakli() {
