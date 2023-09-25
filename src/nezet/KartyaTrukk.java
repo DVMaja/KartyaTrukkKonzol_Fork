@@ -8,19 +8,27 @@ public class KartyaTrukk {
     private static final Scanner sc = new Scanner(System.in);
 
     public KartyaTrukk() {
-        indit();
-
-    }
-
-    private void indit() {
         Pakli pakli1 = new Pakli();
 
         for (int i = 0; i < 3; i++) {
-            //pakli1.kirak();
+            kirak(pakli1);
             int oszlop = melyik();
             //pakli1.kever(oszlop);
         }
         //pakli1.ezVolt();
+        pakli1.getPakli();
+
+    }
+
+    //private void indit() {}
+    private void kirak(Pakli pakli1) {
+
+        for (int i = 1; i < pakli1.getPakli().length; i++) {
+            System.out.printf("%-8s", pakli1.getPakli()[i]);
+            if (i % 3 == 0) {
+                System.out.println("");
+            }
+        }
     }
 
     private int melyik() {
@@ -33,4 +41,5 @@ public class KartyaTrukk {
         } while (!jo);
         return oszlop;
     }
+
 }
